@@ -8,7 +8,8 @@
   <ul>
     <li><h3>Name: <%= comedian.name %></h3></li>
     <li><h4>Age: <%= comedian.age %></h4></li>
-    Specials:
+
+    <h4> <%= comedian.specials.count %> Specials:</h4>
     <ul>
       <% comedian.specials.each do |special| %></h4></li>
       <li><h4><%= special.name %></h4></li>
