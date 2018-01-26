@@ -5,7 +5,12 @@ class LaughTracksApp < Sinatra::Base
   end
 
   get '/comedians' do
-    @comedians = Comedian.all
+    if params[:age] != nil
+      @comedians = Comedian.where(: params[:age])
+      require 'pry'; binding.pry
+    else
+      @comedians = Comedian.all
+    end
 
     erb :index
   end
